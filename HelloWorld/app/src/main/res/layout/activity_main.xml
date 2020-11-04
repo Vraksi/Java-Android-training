@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/choose_name"
+
+        > </TextView>
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RadioButton
+            android:id="@+id/NoName"
+            android:layout_width="99dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginEnd="24dp"
+            android:checked="true"
+            android:text="@string/no_name"> </RadioButton>
+
+        <RadioButton
+            android:id="@+id/FirstName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginEnd="24dp"
+            android:text="@string/first_name"> </RadioButton>
+
+        <RadioButton
+            android:id="@+id/LastName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginEnd="24dp"
+            android:text="@string/last_name"> </RadioButton>
+    </RadioGroup>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp">
+        <TextView
+            android:id="@+id/NameInstruc"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/type_name"
+            android:textSize="24sp"> </TextView>
+
+        <EditText
+            android:id="@+id/UserInput"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="end"
+            android:inputType="text"
+            android:hint="@string/your_name"> </EditText>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/BtnResult"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:gravity=""
+            android:text="@string/save"> </Button>
+
+        <EditText
+            android:id="@+id/Result"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:inputType="text"> </EditText>
+    </LinearLayout>
+
+
+    <!-- Simpel regnemaskine
+    <EditText
+        android:id="@+id/FrstNum"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number">
+
+    </EditText>
+    <EditText
+        android:id="@+id/ScndNum"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number">
+
+    </EditText>
+    <Button
+        android:id="@+id/Plus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="+"
+    >Compute</Button>
+    <Button
+        android:id="@+id/Minus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="-"
+        >Compute</Button>
+    <EditText
+        android:id="@+id/Result"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number">
+
+    </EditText>
+-->
+
+</LinearLayout>

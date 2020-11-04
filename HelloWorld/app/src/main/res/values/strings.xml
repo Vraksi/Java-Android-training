@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">HelloWorld</string>
+    <string name="type_name">Type Name:</string>
+    <string name="your_name">Your name</string>
+    <string name="choose_name">Choose name</string>
+    <string name="no_name">No name</string>
+    <string name="first_name">First name</string>
+    <string name="last_name">Last Name</string>
+    <string name="save">Save</string>
+</resources>
