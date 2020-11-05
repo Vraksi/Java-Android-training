@@ -10,20 +10,32 @@
 
     <TextView
         android:id="@+id/placeHolder"
-        android:textSize="20dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:gravity="center"
         android:text="Placeholder"
-        android:gravity="center">
+        android:textSize="20dp">
 
     </TextView>
 
     <EditText
         android:id="@+id/tempResult"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:gravity="center">
 
     </EditText>
+
+    <TextView
+        android:id="@+id/i"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:text="dawdaw">
+
+    </TextView>
 
     <Button
         android:id="@+id/goBack"

@@ -41,7 +41,11 @@
     <TextView
         android:id="@+id/result"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="30sp"
+        android:textColor="#1EFA01"
+        android:hint="dit nummer">
 
     </TextView>
 
