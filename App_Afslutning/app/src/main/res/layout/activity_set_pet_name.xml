@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SetPetName"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Write the name of your..."
+        android:textSize="24sp"
+        >
+
+    </TextView>
+    <RadioGroup
+        android:id="@+id/petTypes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        >
+        <RadioButton
+            android:id="@+id/mother"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mother">
+
+        </RadioButton>
+        <RadioButton
+            android:id="@+id/father"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Father">
+
+        </RadioButton>
+        <RadioButton
+            android:id="@+id/dog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dog">
+
+        </RadioButton>
+        <RadioButton
+            android:id="@+id/cat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cat">
+
+        </RadioButton>
+    </RadioGroup>
+    <EditText
+        android:id="@+id/svar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </EditText>
+
+    <Button
+        android:id="@+id/sendSvar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Send">
+
+    </Button>
+
+</LinearLayout>

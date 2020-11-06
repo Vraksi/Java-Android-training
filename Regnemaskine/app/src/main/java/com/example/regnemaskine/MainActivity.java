@@ -46,5 +46,6 @@ public class MainActivity extends AppCompatActivity {
             int i = data.getIntExtra("result", 1);
             result.setText(Integer.toString(i));
         }
+        
     }
 }

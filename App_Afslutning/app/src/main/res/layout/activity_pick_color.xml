@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PickColor"
+    android:orientation="vertical"
+    android:gravity="center_horizontal">
+
+    <TextView
+        android:id="@+id/type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        android:text="Types color "
+        >
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/colorPreview"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#B82E2E"
+        >
+
+    </TextView>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Red"
+            android:textSize="24sp">
+
+        </TextView>
+        <Spinner
+            android:id="@+id/spnRed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Blue"
+            android:textSize="24sp">
+
+        </TextView>
+        <Spinner
+            android:id="@+id/spnBlue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Green"
+            android:textSize="24sp">
+
+        </TextView>
+        <Spinner
+            android:id="@+id/spnGreen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/sendColor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Send Color">
+
+    </Button>
+
+</LinearLayout>
