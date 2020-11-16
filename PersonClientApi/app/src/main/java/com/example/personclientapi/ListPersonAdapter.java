@@ -2,6 +2,8 @@ package com.example.personclientapi;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+import android.content.Intent;
+import android.os.Parcelable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,6 +11,8 @@ import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.google.gson.Gson;
 
 import java.util.ArrayList;
 
@@ -20,6 +24,8 @@ public class ListPersonAdapter extends BaseAdapter {
 
     private ArrayList<Person> personList;
     private MainActivity context;
+    private final int REQ_DEL = 1;
+    Intent intent;
 
     public ListPersonAdapter(ArrayList<Person> persons, MainActivity mainActivity)
     {
@@ -54,7 +60,6 @@ public class ListPersonAdapter extends BaseAdapter {
 
         name.setText(person.getName());
         job.setText(person.getJob());
-        System.out.println(person.getJob());
 
         btnDel.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -73,6 +78,17 @@ public class ListPersonAdapter extends BaseAdapter {
                 });
                 alert.setNegativeButton("Nej", null);
                 alert.show();
+            }
+        });
+
+        name.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                intent = new Intent(context, PersonView.class);
+                Gson gson = new Gson();
+                String Json = gson.toJson(person);
+                intent.putExtra("person", Json);
+                context.startActivityForResult(intent, REQ_DEL);
             }
         });
 
@@ -96,3 +112,4 @@ public class ListPersonAdapter extends BaseAdapter {
         });
     }
 }
+

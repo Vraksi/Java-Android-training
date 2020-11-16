@@ -1,11 +1,16 @@
 package com.example.personclientapi;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 
+import android.view.View;
 import android.widget.ListView;
 import android.widget.Toast;
+
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -18,6 +23,11 @@ import static com.example.personclientapi.ServiceBuilder.buildService;
 
 public class MainActivity extends AppCompatActivity {
 
+    FloatingActionButton FAB;
+    Intent intent;
+    final int REQ_POST_PERSON = 1;
+    final int REQ_DEL = 0;
+    ArrayList<Person> persons;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,11 +35,20 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         GetPersons();
 
+        FAB = findViewById(R.id.btnAdd);
+
+        FAB.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                intent = new Intent(MainActivity.this, AddPerson.class);
+                startActivityForResult(intent, REQ_POST_PERSON);
+            }
+        });
     }
 
     private void GetPersons()
     {
-        ArrayList<Person> persons = new ArrayList<Person>();
+        persons = new ArrayList<Person>();
         PersonService service = ServiceBuilder.buildService(PersonService.class);
 
         Call<List<Person>> request = service.GetPersons();
@@ -40,7 +59,6 @@ public class MainActivity extends AppCompatActivity {
                 for (Person f: response.body())
                 {
                     persons.add(f);
-                    System.out.println(f.getName());
                 }
                 ListPersonAdapter listPersonAdapter = new ListPersonAdapter(persons, MainActivity.this);
                 ListView listView = findViewById(R.id.lstPersons);
@@ -76,5 +94,14 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if(requestCode == REQ_DEL)
+        {
+            persons.remove(data.getIntExtra("toDel", -1));
+            //GetPersons();
+        }
+        GetPersons();
+    }
 }

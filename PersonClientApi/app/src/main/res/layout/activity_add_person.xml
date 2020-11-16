@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddPerson"
+    android:gravity="top"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="30sp"
+        android:textAlignment="center"
+        android:text="Add Person"
+        />
+    <EditText
+        android:id="@+id/name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="30sp"
+        android:textAlignment="center"
+        android:hint="Persons name"
+        android:inputType="text"
+        />
+
+    <EditText
+        android:id="@+id/job"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="30sp"
+        android:textAlignment="center"
+        android:hint="Persons job"
+        android:inputType="text"
+        />
+    <EditText
+        android:id="@+id/yearOfBirth"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="30sp"
+        android:textAlignment="center"
+        android:hint="Persons birthyear"
+        android:inputType="date"
+        />
+
+    <RadioGroup
+        android:id="@+id/driversLicense"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RadioButton
+            android:id="@+id/driversLicenseTrue"
+            android:text="I have a drivers license"
+            android:textSize="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <RadioButton
+            android:id="@+id/driversLicenseFalse"
+            android:text="I dont have a drivers license"
+            android:textSize="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:focusedByDefault="true"/>
+
+    </RadioGroup>
+
+    <Spinner
+        android:id="@+id/gender"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:textSize="30sp"
+        android:textAlignment="center"
+        android:layout_marginBottom="10dp"
+        android:hint="Persons gender"
+        />
+    <EditText
+        android:id="@+id/relationshipStatus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:textSize="30sp"
+        android:textAlignment="center"
+        android:hint="Persons status"
+        android:inputType="text"
+        />
+
+    <Button
+        android:id="@+id/sendAnswer"
+        android:layout_marginTop="190dp"
+        android:text="Add Person"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="40dp"
+        />
+</LinearLayout>
